@@ -1,0 +1,66 @@
+servern is ruuning on port 3000
+D:\projects\dbtesting\server\node_modules\mongoose\lib\connection.js:829
+    err = new ServerSelectionError();
+          ^
+
+MongooseServerSelectionError: connect ECONNREFUSED ::1:27017
+    at _handleConnectionErrors (D:\projects\dbtesting\server\node_modules\mongoose\lib\connection.js:829:11)
+    at NativeConnection.openUri (D:\projects\dbtesting\server\node_modules\mongoose\lib\connection.js:804:11) {        
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'localhost:27017' => ServerDescription {
+        address: 'localhost:27017',
+        type: 'Unknown',
+        hosts: [],
+        passives: [],
+        arbiters: [],
+        tags: {},
+        minWireVersion: 0,
+        maxWireVersion: 0,
+        roundTripTime: -1,
+        lastUpdateTime: 18236062,
+        lastWriteDate: 0,
+        error: MongoNetworkError: connect ECONNREFUSED ::1:27017
+            at connectionFailureError (D:\projects\dbtesting\server\node_modules\mongodb\lib\cmap\connect.js:379:20)   
+            at Socket.<anonymous> (D:\projects\dbtesting\server\node_modules\mongodb\lib\cmap\connect.js:285:22)       
+            at Object.onceWrapper (node:events:629:26)
+            at Socket.emit (node:events:514:28)
+            at emitErrorNT (node:internal/streams/destroy:151:8)
+            at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
+          [cause]: Error: connect ECONNREFUSED ::1:27017
+              at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16) {
+            errno: -4078,
+            code: 'ECONNREFUSED',
+            syscall: 'connect',
+            address: '::1',
+            port: 27017
+          }
+        },
+        topologyVersion: null,
+        setName: null,
+        setVersion: null,
+        electionId: null,
+        logicalSessionTimeoutMinutes: null,
+        primary: null,
+        me: null,
+        '$clusterTime': null
+      }
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined
+}
+
+Node.js v18.17.1
+[nodemon] app crashed - waiting for file changes before starting...
